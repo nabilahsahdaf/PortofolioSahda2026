@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-nabilah",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portofolio Website Nabilah Sahda Firjatullah - UI/UX Designer & Data Analyst",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "portfolio",
+    "ui-ux",
+    "data-analyst",
+    "system-analyst"
+  ],
+  "author": "Nabilah Sahda Firjatullah",
+  "license": "MIT"
+}

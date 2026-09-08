@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portofolio resmi Nabilah Sahda Firjatullah - UI/UX Designer & Data Analyst. Mahasiswa Sistem Informasi UPN 'Veteran' Jawa Timur berfokus pada Design Thinking, User Flow, Prototyping Figma, dan Data Visualization.">
+  <meta name="keywords"
+    content="Nabilah Sahda Firjatullah, Portofolio UI/UX, UI UX Designer Surabaya, Data Analyst Surabaya, UPN Veteran Jatim, Figma, Looker Studio, Agrofriend, Peduli Gula, Paddle Pals">
+  <meta name="author" content="Nabilah Sahda Firjatullah">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Nabilah Sahda Firjatullah | UI/UX Designer & Data Analyst">
+  <meta property="og:description"
+    content="Transforming complex data into intuitive, human-centered digital experiences. Portofolio UI/UX Design & Data Analytics.">
+  <meta property="og:type" content="website">
+
+  <title>Nabilah Sahda Firjatullah | UI/UX Designer & System Analyst</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Ambient Glowing & Canvas Stars Background -->
+  <div class="bg-ambient-decor" aria-hidden="true">
+    <div class="stars-container" id="stars-container"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Floating Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" aria-label="Navigasi Utama">
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certification" class="nav-link">Certification</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="btn-icon" aria-label="Ganti Tema Warna" title="Ganti Tema">
+          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta-btn">
+          Let's Talk
+        </a>
+
+        <button id="mobile-menu-btn" class="btn-icon mobile-menu-btn" aria-label="Buka Menu Navigasi Mobile">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Menu Navigasi Mobile">
+    <div class="mobile-nav-header">
+      <button id="close-mobile-menu-btn" class="btn-icon" aria-label="Tutup Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certification" class="nav-link">Certification</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+
+          <!-- Title with Watermark -->
+          <div class="hero-title-container">
+            <span class="hero-watermark" aria-hidden="true">PORTFOLIO</span>
+            <h1 class="hero-name" id="hero-name">Nabilah Sahda Firjatullah</h1>
+          </div>
+
+          <!-- Dynamic Role Subtitle (Rolling Animation) -->
+          <div class="hero-role-wrapper">
+            <span class="hero-role-prefix">I am a</span>
+            <div class="role-roller-wrapper" id="role-roller-wrapper">
+              <span class="role-roller-text active" id="typewriter-text">UI/UX Design</span>
+            </div>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <!-- Quick Stat Counters -->
+          <div class="hero-stats-grid" id="hero-stats">
+            <!-- Injected via JavaScript -->
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Hubungi Saya</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#projects" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <span>Lihat Portofolio</span>
+            </a>
+            <a href="mailto:nabilahsahdaf@gmail.com" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>Email Langsung</span>
+            </a>
+          </div>
+
+          <!-- Scroll Down Indicator -->
+          <div class="btn-scroll-next">
+            <a href="#about" class="scroll-down" aria-label="Scroll ke bagian About Me">
+              <span class="chevron c1"></span>
+              <span class="chevron c2"></span>
+              <span class="chevron c3"></span>
+            </a>
+            <span class="main-scroll-text">Let's Get to Know Me More!</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION WITH INTERACTIVE 3D LANYARD CARD -->
+    <section id="about" class="section-container about-section">
+      <div class="container">
+
+        <div class="about-grid">
+          <!-- Left Column: Interactive 3D Lanyard ID Card -->
+          <div class="about-left">
+            <div class="lanyard-container">
+              <div class="lanyard-strap"></div>
+              <div class="lanyard-clip"></div>
+
+              <div class="id-card" id="interactive-id-card">
+                <div class="card-reflection"></div>
+
+                <div class="id-card-header">
+                  <div class="id-card-brand">
+                    <span class="id-brand-dot"></span>
+                    <span class="id-brand-text">UPN "VETERAN" JATIM</span>
+                  </div>
+                  <span class="id-card-tag">STUDENT ID</span>
+                </div>
+
+                <div class="id-card-photo-wrapper">
+                  <img src="assets/WhatsApp Image 2026-09-08 at 12.01.49 editt.jpeg"
+                    alt="Foto Nabilah Sahda Firjatullah" class="id-card-photo" loading="lazy">
+                  <div class="id-photo-badge">
+                    <span class="pulse-dot"></span>
+                    <span>ACTIVE</span>
+                  </div>
+                </div>
+
+                <div class="id-card-details">
+                  <h3 class="id-name">Nabilah Sahda F.</h3>
+                  <p class="id-role">UI/UX Designer & System Analyst</p>
+                  <p class="id-degree">S1 Sistem Informasi • IPK 3.74</p>
+
+                  <div class="id-card-divider"></div>
+
+                  <div class="id-card-meta">
+                    <div class="meta-item">
+                      <span class="meta-label">Lokasi</span>
+                      <span class="meta-val">Kab. Bekasi, ID</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="meta-label">Fokus</span>
+                      <span class="meta-val">UI/UX Design & System Analyst</span>
+                    </div>
+                  </div>
+
+                  <div class="id-barcode-mockup">
+                    <span class="barcode-line"></span>
+                    <span class="barcode-line"></span>
+                    <span class="barcode-line"></span>
+                    <span class="barcode-line"></span>
+                    <span class="barcode-line"></span>
+                    <span class="barcode-line"></span>
+                    <span class="barcode-line"></span>
+                    <span class="barcode-number">2022 • SISTEM INFORMASI</span>
+                  </div>
+                </div>
+              </div>
+              <p class="id-card-hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6"></path>
+                  <path d="m12 12 4 10 1.7-4.3L22 16Z"></path>
+                </svg> Hover & gerakkan kursor untuk efek 3D</p>
+            </div>
+          </div>
+
+          <!-- Right Column: Story & Highlights -->
+          <div class="about-right">
+            <div class="section-tag">// ABOUT ME</div>
+            <h2 class="section-title">Nabilah <span class="gradient-text">Sahda</span> <span
+                class="section-text">Firjatullah</span></h2>
+
+            <div class="about-story-text" id="about-story">
+              <!-- Rendered from data.js -->
+            </div>
+
+            <!-- Quick Information Badges -->
+            <div class="quick-info-grid" id="quick-info-grid">
+              <!-- Injected via JavaScript -->
+            </div>
+
+            <!-- Principles / Core Values Grid -->
+            <div class="about-principles-section">
+              <h3 class="principles-heading">Prinsip Kerja & Pendekatan:</h3>
+              <div class="principles-grid" id="principles-grid">
+                <!-- Injected via JavaScript -->
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary">
+                <span>Mari Berkolaborasi</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#experience" class="btn btn-outline">
+                <span>Lihat Pengalaman Kerja</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. EXPERIENCES SECTION -->
+    <section id="experience" class="section-container experience-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">// EXPERIENCES</div>
+          <h2 class="section-title">Pengalaman<span class="gradient-text"></span></h2>
+          <p class="section-subtitle">
+          </p>
+        </div>
+
+        <div class="timeline-wrapper" id="timeline-container">
+          <!-- Injected via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SKILLS SECTION -->
+    <section id="skills" class="section-container skills-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">// SKILLS & COMPETENCIES</div>
+          <h2 class="section-title">Kemampuan<span class="gradient-text"></span></h2>
+          <p class="section-subtitle">
+          </p>
+        </div>
+
+        <!-- Skills Filter Tabs -->
+        <div class="filter-tabs-wrapper">
+          <div class="filter-tabs" id="skills-filter-tabs">
+            <button class="filter-tab active" data-filter="all">Semua Keahlian</button>
+            <button class="filter-tab" data-filter="uiux">UI/UX & Product Design</button>
+            <button class="filter-tab" data-filter="data">Data Analysis & Viz</button>
+            <button class="filter-tab" data-filter="tech">Web & Technical</button>
+            <button class="filter-tab" data-filter="soft">Methods & Soft Skills</button>
+          </div>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div class="skills-grid" id="skills-grid">
+          <!-- Injected via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS / PORTFOLIO SECTION -->
+    <section id="projects" class="section-container projects-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">// FEATURED PROJECTS</div>
+          <h2 class="section-title">Proyek <span class="gradient-text"></span></h2>
+          <p class="section-subtitle">
+          </p>
+        </div>
+
+        <!-- Project Filter Tabs -->
+        <div class="filter-tabs-wrapper">
+          <div class="filter-tabs" id="projects-filter-tabs">
+            <button class="filter-tab active" data-filter="all">Semua Proyek</button>
+            <button class="filter-tab" data-filter="uiux">UI/UX Mobile App</button>
+            <button class="filter-tab" data-filter="web-uiux">Web Platform & Dashboard</button>
+            <button class="filter-tab" data-filter="data">Data Analytics & Infographics</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Injected via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. CERTIFICATIONS, EDUCATION & TRAININGS -->
+    <section id="certification" class="section-container education-section">
+      <div id="education"></div>
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">// CERTIFICATIONS & CREDENTIALS</div>
+          <h2 class="section-title">Sertifikasi, <span class="gradient-text">Pelatihan</span> & Pendidikan</h2>
+          <p class="section-subtitle">
+          </p>
+        </div>
+
+        <div class="credentials-layout">
+          <!-- Left: Education & Certifications -->
+          <div class="credentials-col">
+            <div class="subheading-wrapper">
+              <span class="subheading-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </span>
+              <h3>Pendidikan Formal & Sertifikasi Resmi</h3>
+            </div>
+
+            <!-- Education Card -->
+            <div class="education-cards" id="education-container">
+              <!-- Injected via JS -->
+            </div>
+
+            <!-- Certifications List -->
+            <div class="certifications-list" id="certifications-container">
+              <!-- Injected via JS -->
+            </div>
+          </div>
+
+          <!-- Right: Professional Trainings (MySkill) -->
+          <div class="credentials-col">
+            <div class="subheading-wrapper">
+              <span class="subheading-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+              <h3>Pelatihan & Short Classes Profesional</h3>
+            </div>
+
+            <div class="trainings-list" id="trainings-container">
+              <!-- Injected via JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. ACHIEVEMENTS SECTION -->
+    <section id="achievements" class="section-container achievements-section">
+      <div class="container">
+
+        <div class="section-header text-center">
+          <div class="section-tag">// ACHIEVEMENTS</div>
+          <h2 class="section-title">Pencapaian<span class="gradient-text"></span></h2>
+          <p class="section-subtitle">
+          </p>
+        </div>
+
+        <div class="achievements-container" id="achievements-container">
+          <!-- Injected via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. CONTACT SECTION -->
+    <section id="contact" class="section-container contact-section">
+      <div class="container">
+
+        <div class="contact-card-glass">
+          <div class="contact-grid">
+
+            <!-- Contact Info -->
+            <div class="contact-info-side">
+              <div class="section-tag">// GET IN TOUCH</div>
+              <h2 class="contact-heading">Mari Bekerja Sama & Ciptakan Sesuatu yang <span class="gradient-text">Luar
+                  Biasa!</span></h2>
+              <p class="contact-desc">
+                Apakah Anda memiliki proyek UI/UX, kebutuhan visualisasi data, tawaran magang/karir, atau sekadar ingin
+                berdiskusi? Jangan ragu untuk menghubungi saya!
+              </p>
+
+              <!-- Direct Channels -->
+              <div class="contact-channel-list">
+
+                <div class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-label">Email Resmi</span>
+                    <a href="mailto:nabilahsahdaf@gmail.com" class="channel-value"
+                      id="contact-email-text">nabilahsahdaf@gmail.com</a>
+                  </div>
+                  <button id="btn-copy-email" class="channel-action-btn" title="Salin Email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Salin</span>
+                  </button>
+                </div>
+
+                <div class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-label">Telepon / WhatsApp</span>
+                    <a href="https://wa.me/6281288473857" target="_blank" rel="noopener noreferrer"
+                      class="channel-value">0812-8847-3857</a>
+                  </div>
+                  <a href="https://wa.me/6281288473857" target="_blank" rel="noopener noreferrer"
+                    class="channel-action-btn" title="Chat di WhatsApp">
+                    <span>Chat WA</span>
+                  </a>
+                </div>
+
+                <div class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="channel-content">
+                    <span class="channel-label">Domisili</span>
+                    <span class="channel-value">Kab. Bekasi, Jawa Barat, Indonesia</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Social Links -->
+              <div class="contact-socials-wrapper">
+                <span class="socials-label">Temukan Saya di:</span>
+                <div class="socials-list" id="contact-socials-list">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Contact Message Form -->
+            <div class="contact-form-side">
+              <div class="form-card-inner">
+                <h3 class="form-title">Kirim Pesan Langsung</h3>
+                <p class="form-subtitle">Formulir terhubung otomatis ke email saya.</p>
+
+                <form id="portfolio-contact-form" class="contact-form" novalidate>
+                  <div class="form-group">
+                    <label for="form-name">Nama Lengkap <span class="required">*</span></label>
+                    <input type="text" id="form-name" name="name" class="form-control"
+                      placeholder="Contoh: Sarah Adelia" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-email">Alamat Email <span class="required">*</span></label>
+                    <input type="email" id="form-email" name="email" class="form-control"
+                      placeholder="nama@perusahaan.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-subject">Perihal / Kategori</label>
+                    <select id="form-subject" name="subject" class="form-control">
+                      <option value="Tawaran Pekerjaan / Magang">Tawaran Pekerjaan / Magang</option>
+                      <option value="Proyek UI/UX Design">Proyek UI/UX Design</option>
+                      <option value="Kebutuhan Data Analysis">Kebutuhan Data Analysis & Dashboard</option>
+                      <option value="Kolaborasi & Diskusi">Kolaborasi & Diskusi Terbuka</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-message">Pesan Anda <span class="required">*</span></label>
+                    <textarea id="form-message" name="message" class="form-control" rows="4"
+                      placeholder="Tuliskan pesan atau detail peluang Anda di sini..." required></textarea>
+                  </div>
+
+                  <button type="submit" id="btn-submit-message" class="btn btn-primary btn-block">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    <span>Kirim Pesan Sekarang</span>
+                  </button>
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Project Details Modal -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-dialog">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Tutup Modal">&times;</button>
+      <div class="modal-body" id="modal-content-area">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div id="toast-notification" class="toast-notification" role="alert" aria-live="polite">
+    <div class="toast-icon" id="toast-icon">✓</div>
+    <div class="toast-message" id="toast-message">Pemberitahuan</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#home" class="footer-brand">
+          <span class="brand-avatar-badge small">NSF</span>
+          <span>Nabilah Sahda Firjatullah</span>
+        </a>
+        <p class="footer-copy">
+          &copy; 2026 Nabilah Sahda Firjatullah. All rights reserved. <br>
+          <span class="footer-subtext">Designed with empathy & precision. Built for impact.</span>
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-socials" id="footer-socials">
+          <!-- Injected via JS -->
+        </div>
+        <a href="#home" class="btn-back-to-top" aria-label="Kembali ke atas">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+          <span>Ke Atas</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
