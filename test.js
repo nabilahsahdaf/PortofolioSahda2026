@@ -84,8 +84,9 @@ async function runTests() {
     assert(resApp.statusCode === 200, 'GET /main.js mengembalikan status 200 OK');
     assert(resApp.headers['content-type'].includes('javascript'), 'Content-Type main.js adalah javascript');
 
-    // 5. Test Asset Images
+    // 5. Test Asset Images & Favicon
     const assetsToTest = [
+      '/assets/favicon.svg',
       '/assets/avatar-nabilah.jpg',
       '/assets/Thumbnail.jpg',
       '/assets/project-agrofriend.jpg',
