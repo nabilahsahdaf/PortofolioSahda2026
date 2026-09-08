@@ -79,10 +79,10 @@ async function runTests() {
     assert(resData.statusCode === 200, 'GET /data.js mengembalikan status 200 OK');
     assert(resData.headers['content-type'].includes('javascript'), 'Content-Type data.js adalah javascript');
 
-    // 4. Test JavaScript Application Logic (/app.js)
-    const resApp = await fetchUrl('/app.js');
-    assert(resApp.statusCode === 200, 'GET /app.js mengembalikan status 200 OK');
-    assert(resApp.headers['content-type'].includes('javascript'), 'Content-Type app.js adalah javascript');
+    // 4. Test JavaScript Application Logic (/main.js)
+    const resApp = await fetchUrl('/main.js');
+    assert(resApp.statusCode === 200, 'GET /main.js mengembalikan status 200 OK');
+    assert(resApp.headers['content-type'].includes('javascript'), 'Content-Type main.js adalah javascript');
 
     // 5. Test Asset Images
     const assetsToTest = [
