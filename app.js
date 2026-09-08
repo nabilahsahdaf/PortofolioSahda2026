@@ -3,13 +3,14 @@
  * UI/UX Designer & Data Analyst
  */
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Ensure portfolioData is loaded
-  const data = window.portfolioData;
-  if (!data) {
-    console.error("Data portofolio tidak ditemukan!");
-    return;
-  }
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", () => {
+    // Ensure portfolioData is loaded
+    const data = typeof window !== "undefined" ? window.portfolioData : null;
+    if (!data) {
+      console.error("Data portofolio tidak ditemukan!");
+      return;
+    }
 
   // 1. Inisialisasi Fitur & Render
   initThemeToggle();
@@ -28,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initProjectModal(data.projects);
   initContactForm();
-});
+  });
+}
 
 /* ==========================================================================
    2. TEMA WARNA (DARK / LIGHT MODE TOGGLE)
