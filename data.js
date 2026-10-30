@@ -25,10 +25,9 @@ const portfolioData = {
     socialLinks: {
       email: "mailto:nabilahsahdaf@gmail.com",
       whatsapp: "https://wa.me/6281288473857",
-      linkedin: "https://linkedin.com/in/nabilahsahda",
-      instagram: "https://instagram.com/nabilahsahda",
-      github: "https://github.com/nabilahsahda",
-      figma: "https://www.figma.com/@nabilahsahda"
+      linkedin: "https://www.linkedin.com/in/nabilahsahdaf/",
+      instagram: "https://www.instagram.com/nabilahsahdaf/?utm_source=ig_web_button_share_sheet",
+      github: "https://github.com/nabilahsahdaf"
     },
     stats: [
       { label: "IPK Kumulatif", value: "3.74", suffix: "/4.00", icon: "academic-cap" },
