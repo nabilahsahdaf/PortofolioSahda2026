@@ -84,13 +84,18 @@ async function runTests() {
     assert(resApp.statusCode === 200, 'GET /main.js mengembalikan status 200 OK');
     assert(resApp.headers['content-type'].includes('javascript'), 'Content-Type main.js adalah javascript');
 
-    // 5. Test Asset Images & Favicon
+    // 5. Test Asset Images, Favicon & Certificates
     const assetsToTest = [
       '/assets/favicon.svg',
       '/assets/avatar-nabilah.jpg',
       '/assets/Thumbnail.jpg',
       '/assets/project-agrofriend.jpg',
-      '/assets/project-paddlepals.jpg'
+      '/assets/project-paddlepals.jpg',
+      '/assets/cert-ept.jpg',
+      '/assets/cert-myskill-ux-writing.jpg',
+      '/assets/cert-myskill-figma.jpg',
+      '/assets/cert-myskill-data-visualization.jpg',
+      '/assets/cert-myskill-frontend.jpg'
     ];
 
     for (const assetPath of assetsToTest) {
@@ -105,7 +110,7 @@ async function runTests() {
     // 7. Test Headless Edge Browser DOM & Script Execution
     console.log('\n🌐 Melakukan Browser Runtime Testing (Headless Edge)...');
     const edgePath = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
-    
+
     if (fs.existsSync(edgePath)) {
       const browserOutput = await new Promise((resolve) => {
         const proc = spawn(edgePath, [

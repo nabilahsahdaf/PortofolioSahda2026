@@ -1930,6 +1930,95 @@ img {
   line-height: 1.5;
 }
 
+.cert-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.cert-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.cert-score-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-teal);
+  background: rgba(20, 184, 166, 0.12);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.cert-score-breakdown {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--border-color);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.cert-score-breakdown .breakdown-label {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cert-credential-id {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+
+.cert-action-row {
+  margin-top: 10px;
+}
+
+.btn-cert-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 0.785rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-cert-preview:hover {
+  background: var(--gradient-btn);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+.btn-cert-preview.small {
+  padding: 5px 10px;
+  font-size: 0.735rem;
+}
+
 /* Trainings */
 .trainings-list {
   display: flex;
@@ -1956,6 +2045,41 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 6px;
+}
+
+.training-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.training-category-pill {
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-purple);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.training-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.training-cert-id {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
 }
 
 .training-provider {

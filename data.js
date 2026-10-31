@@ -251,17 +251,22 @@ const portfolioData = {
       type: "Sertifikasi Nasional",
       badge: "BNSP Resmi",
       icon: "award",
-      description: "Pengujian kompetensi nasional mencakup pemahaman arsitektur pemrograman web, logika algoritma, database relational, serta implementasi standar industri."
+      description: "Pengujian kompetensi nasional mencakup pemahaman arsitektur pemrograman web, logika algoritma, database relational, serta implementasi standar industri.",
+      image: null
     },
     {
       id: "cert-ept",
       title: "English Proficiency Test (EPT)",
       issuer: "UPA Bahasa UPN Veteran Jawa Timur",
-      validity: "2026 - 2028",
+      validity: "09 April 2026 - 2028",
       type: "Language Certification",
-      badge: "Certified",
+      badge: "Certified • Skor 450",
+      score: "450",
+      scoreDetail: "Listening: 47 • Structure: 41 • Reading: 47 (Benchmark: 310 - 677)",
+      credentialId: "No Seri: 131840 • ID: 22082010240",
       icon: "globe",
-      description: "Sertifikasi kemahiran berbahasa Inggris profesional mencakup kemampuan mendengarkan (listening), struktur tata bahasa (structure), dan pemahaman teks (reading)."
+      description: "Sertifikasi kemahiran berbahasa Inggris resmi (setara TOEFL Institutional) dari UPA Bahasa UPN 'Veteran' Jawa Timur dengan pencapaian skor 450.",
+      image: "assets/cert-ept.jpg"
     }
   ],
 
@@ -269,34 +274,42 @@ const portfolioData = {
     {
       id: "train-uxwriting",
       title: "Short Class UI/UX Research & Design: UX Writing Fundamental",
-      provider: "MySkill",
-      date: "Oktober 2023",
+      provider: "MySkill.id",
+      date: "17 Oktober 2023",
       category: "UI/UX Design",
-      desc: "Prinsip penulisan microcopy yang jelas, padat, dan berempati untuk membimbing pengguna dalam navigasi produk digital."
+      certId: "94040/UIX/LM/10/2023",
+      desc: "Prinsip penulisan microcopy yang jelas, padat, dan berempati untuk membimbing pengguna dalam navigasi produk digital.",
+      image: "assets/cert-myskill-ux-writing.jpg"
+    },
+    {
+      id: "train-figma",
+      title: "Short Class UI/UX Design: Introduction to Figma",
+      provider: "MySkill.id",
+      date: "25 Maret 2023",
+      category: "UI/UX Design",
+      certId: "32109/UIX/LM/03/2023",
+      desc: "Fundamental penguasaan Figma: layouting, design system components, interactive prototyping, dan best practice collaboration.",
+      image: "assets/cert-myskill-figma.jpg"
+    },
+    {
+      id: "train-dataviz",
+      title: "Short Class Data Analysis: Basic Statistics and Data Visualization",
+      provider: "MySkill.id",
+      date: "19 Maret 2023",
+      category: "Data Analysis",
+      certId: "28829/DTA/LM/03/2023",
+      desc: "Fundamental analisis data: statistik dasar, visualisasi data, pengolahan variabel, dan interpretasi grafik untuk insight bisnis.",
+      image: "assets/cert-myskill-data-visualization.jpg"
     },
     {
       id: "train-frontend",
       title: "Short Class Software Engineering: Introduction to Frontend",
-      provider: "MySkill",
-      date: "Maret 2023",
+      provider: "MySkill.id",
+      date: "18 Maret 2023",
       category: "Software Engineering",
-      desc: "Pemahaman dasar arsitektur web client-side, HTML, styling CSS, dan integrasi logika dasar dengan JavaScript."
-    },
-    {
-      id: "train-figma",
-      title: "Short Class UI/UX Research and Design: Introduction to Figma",
-      provider: "MySkill",
-      date: "Maret 2023",
-      category: "UI/UX Design",
-      desc: "Fundamental penguasaan Figma: layouting, design system components, interactive prototyping, dan best practice collaboration."
-    },
-    {
-      id: "train-figma",
-      title: "Short Class Data Analysis - Data Visualization Practice",
-      provider: "MySkill",
-      date: "Maret 2023",
-      category: "Database",
-      desc: "Fundamental analisis data: statistik & variabel, sampling, analisis deskriptif, serta visualisasi distribusi dan komposisi data."
+      certId: "26669/WEB/LM/03/2023",
+      desc: "Pemahaman dasar arsitektur web client-side, semantic HTML5, styling CSS modern, dan integrasi logika dasar JavaScript.",
+      image: "assets/cert-myskill-frontend.jpg"
     }
   ],
 

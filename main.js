@@ -497,6 +497,40 @@ function openProjectModal(projectId) {
   document.body.style.overflow = "hidden";
 }
 
+function openCertificateModal(imgSrc, title, issuer, details) {
+  const modal = document.getElementById("project-modal");
+  const modalContent = document.getElementById("modal-content-area");
+  if (!modal || !modalContent) return;
+
+  modalContent.innerHTML = `
+    <div class="cert-modal-header" style="margin-bottom:16px;">
+      <span class="project-category-tag" style="position:static; margin-bottom:8px; display:inline-block;">Sertifikat Resmi</span>
+      <h2 class="modal-project-title" style="font-size:1.35rem; margin-bottom:6px; line-height:1.3;">${title}</h2>
+      <div style="font-size:0.875rem; color:var(--accent-teal); font-weight:600;">${issuer}</div>
+      ${details ? `<div style="font-size:0.8rem; color:var(--text-muted); margin-top:4px; font-family:var(--font-mono);">${details}</div>` : ''}
+    </div>
+    <div class="cert-modal-img-container" style="background:rgba(0,0,0,0.4); border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border-color); text-align:center; padding:12px; margin-bottom:20px;">
+      <img src="${imgSrc}" alt="${title}" style="max-width:100%; height:auto; max-height:65vh; object-fit:contain; border-radius:var(--radius-sm); box-shadow:0 8px 30px rgba(0,0,0,0.5);" loading="lazy">
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <a href="${imgSrc}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        <span>Buka Gambar Ukuran Penuh</span>
+      </a>
+      <button type="button" class="btn btn-outline" onclick="document.getElementById('project-modal').classList.remove('active'); document.body.style.overflow='';">
+        <span>Tutup</span>
+      </button>
+    </div>
+  `;
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+if (typeof window !== "undefined") {
+  window.openCertificateModal = openCertificateModal;
+}
+
 /* ==========================================================================
    10. EDUCATION, CERTIFICATIONS & TRAININGS
    ========================================================================== */
@@ -525,11 +559,34 @@ function renderEducationAndCertifications(education, certifications, trainings) 
         <div class="cert-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
         </div>
-        <div>
-          <h4 class="cert-title">${cert.title}</h4>
+        <div class="cert-body">
+          <div class="cert-header-row">
+            <h4 class="cert-title">${cert.title}</h4>
+            ${cert.score ? `<span class="cert-score-pill">Skor: ${cert.score}</span>` : ''}
+          </div>
           <div class="cert-issuer">${cert.issuer}</div>
           <div class="cert-validity">Masa Berlaku: ${cert.validity} • <span style="color:var(--accent-teal); font-weight:600;">${cert.badge}</span></div>
           <p class="cert-desc">${cert.description}</p>
+          ${cert.scoreDetail ? `
+            <div class="cert-score-breakdown">
+              <span class="breakdown-label">Rincian Nilai:</span>
+              <span>${cert.scoreDetail}</span>
+            </div>
+          ` : ''}
+          ${cert.credentialId ? `
+            <div class="cert-credential-id">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="12" x2="17" y2="12"></line><line x1="7" y1="16" x2="13" y2="16"></line></svg>
+              <span>${cert.credentialId}</span>
+            </div>
+          ` : ''}
+          ${cert.image ? `
+            <div class="cert-action-row">
+              <button type="button" class="btn-cert-preview" data-cert-img="${cert.image}" data-cert-title="${cert.title}" data-cert-issuer="${cert.issuer}" data-cert-details="${cert.credentialId || ''} • ${cert.scoreDetail || ''}">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>Lihat Sertifikat EPT</span>
+              </button>
+            </div>
+          ` : ''}
         </div>
       </div>
     `).join("");
@@ -539,13 +596,42 @@ function renderEducationAndCertifications(education, certifications, trainings) 
     trainContainer.innerHTML = trainings.map(tr => `
       <div class="training-card">
         <div class="training-top">
-          <span class="training-provider">${tr.provider}</span>
+          <div class="training-meta-left">
+            <span class="training-provider">${tr.provider}</span>
+            <span class="training-category-pill">${tr.category}</span>
+          </div>
           <span class="training-date">${tr.date}</span>
         </div>
         <h4 class="training-title">${tr.title}</h4>
         <p class="training-desc">${tr.desc}</p>
+        <div class="training-bottom">
+          ${tr.certId ? `<span class="training-cert-id">No: ${tr.certId}</span>` : ''}
+          ${tr.image ? `
+            <button type="button" class="btn-cert-preview small" data-cert-img="${tr.image}" data-cert-title="${tr.title}" data-cert-issuer="${tr.provider}" data-cert-details="No. Sertifikat: ${tr.certId || '-'} • ${tr.date}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              <span>Lihat Sertifikat</span>
+            </button>
+          ` : ''}
+        </div>
       </div>
     `).join("");
+  }
+
+  // Delegated event listener for certificate preview buttons
+  if (!window._certBtnListenerAttached) {
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".btn-cert-preview");
+      if (btn) {
+        const imgSrc = btn.getAttribute("data-cert-img");
+        const title = btn.getAttribute("data-cert-title");
+        const issuer = btn.getAttribute("data-cert-issuer");
+        const details = btn.getAttribute("data-cert-details");
+        if (imgSrc) {
+          openCertificateModal(imgSrc, title, issuer, details);
+        }
+      }
+    });
+    window._certBtnListenerAttached = true;
   }
 }
 
