@@ -16,7 +16,7 @@ const portfolioData = {
       "System Analyst"
     ],
     headline: "Transforming complex data into intuitive, human-centered digital experiences.",
-    bio: "Mahasiswa Sistem Informasi UPN 'Veteran' Jawa Timur (IPK 3.74) dengan passion kuat pada UI/UX Design dan Data Analysis. Berpengalaman di Infinite Learning (MSIB) dalam Design Thinking & Figma, serta Dinas Komunikasi dan Informatika Surabaya dalam pengolahan data & dashboard Looker Studio.",
+    bio: "Mahasiswa Sistem Informasi UPN 'Veteran' Jawa Timur (IPK 3.74) dengan passion kuat pada UI/UX Design dan Data Analysis. Berpengalaman di Infinite Learning (MSIB) dalam Design Thinking & Figma, serta Dinas Komunikasi dan Informatika Provinsi Jawa Timur dalam pengolahan data & statistik.",
     location: "Kab. Bekasi, Jawa Barat, Indonesia",
     email: "nabilahsahdaf@gmail.com",
     phone: "081288473857",
@@ -32,13 +32,13 @@ const portfolioData = {
     stats: [
       { label: "IPK Kumulatif", value: "3.74", suffix: "/4.00", icon: "academic-cap" },
       { label: "Proyek Unggulan", value: "4+", suffix: "Karya", icon: "sparkles" },
-      { label: "Sertifikasi Resmi", value: "2", suffix: "BNSP & EPT", icon: "badge-check" },
+      { label: "Sertifikasi Resmi", value: "5", suffix: "Kredensial", icon: "badge-check" },
       { label: "Pelatihan Profesional", value: "4+", suffix: "MySkill", icon: "certificate" }
     ]
   },
 
   about: {
-    story: `**Information Systems** student at Universitas Pembangunan Nasional "Veteran" Jawa Timur with a strong focus on **UI/UX Design, User Flow, and Prototyping**. Gained hands-on experience through the MSIB Independent Study program as a **Web Development & UI/UX Design intern at Infinite Learning - PT Kinema Systrans Multimedia**, covering the application of Design Thinking, user needs identification, flowchart and wireframe creation, and prototyping using Figma. Also experienced as a **Data Analyst at the Communication and Informatics Office of Surabaya City**, processing and visualizing data using Python, SQL, and Looker Studio. Skilled in cross-team collaboration, creative thinking, detail-oriented, and committed to delivering projects on time.`,
+    story: `**Information Systems** student at Universitas Pembangunan Nasional "Veteran" Jawa Timur with a strong focus on **UI/UX Design, User Flow, and Prototyping**. Gained hands-on experience through the MSIB Independent Study program as a **Web Development & UI/UX Design intern at Infinite Learning - PT Kinema Systrans Multimedia**, covering the application of Design Thinking, user needs identification, flowchart and wireframe creation, and prototyping using Figma. Also experienced as a **Data Analyst Intern at Dinas Komunikasi dan Informatika Provinsi Jawa Timur (Bidang Data dan Statistik)**, processing, cleaning, and visualizing sector data using Python, SQL, and Looker Studio. Skilled in cross-team collaboration, creative thinking, detail-oriented, and committed to delivering projects on time.`,
 
     quickInfo: [
       { label: "Domisili", value: "Kab. Bekasi, Jawa Barat, Indonesia" },
@@ -77,25 +77,34 @@ const portfolioData = {
     {
       id: "exp-diskominfo",
       role: "Data Analyst",
-      company: "Dinas Komunikasi dan Informatika Kota Surabaya",
-      period: "Feb 2025 - Jun 2025",
-      type: "Internship / Work Experience",
+      company: "Dinas Komunikasi dan Informatika Provinsi Jawa Timur",
+      period: "18 Feb 2025 - 30 Jun 2025",
+      type: "Program Magang Resmi (Predikat BAIK)",
       location: "Surabaya, Jawa Timur",
       tagColor: "teal",
-      summary: "Mengolah, menganalisis, dan memvisualisasikan data strategis sektoral pemerintah kota untuk mendukung pengambilan kebijakan berbasis data.",
+      summary: "Mengolah, menganalisis, dan memvisualisasikan data strategis sektoral pemerintah di Bidang Data dan Statistik dengan pencapaian Predikat BAIK.",
       achievements: [
         "Melakukan Data Cleaning & Exploratory Data Analysis (EDA) skala besar memanfaatkan Google Colab, Python (Pandas/NumPy), SQL, dan Microsoft Excel.",
         "Merancang dan membangun dashboard analitik interaktif berbasis Looker Studio untuk memudahkan pemangku kepentingan memantau tren data secara real-time.",
         "Menyusun dan menerbitkan Buku Infografis Data Kesehatan Jawa Timur dengan visualisasi data yang komunikatif, menarik, dan mudah dipahami publik."
       ],
-      skills: ["Python", "SQL", "Looker Studio", "Google Colab", "Microsoft Excel", "EDA", "Data Visualization"]
+      skills: ["Python", "SQL", "Looker Studio", "Google Colab", "Microsoft Excel", "EDA", "Data Visualization"],
+      certificates: [
+        {
+          label: "Lihat Sertifikat Magang Diskominfo",
+          title: "Sertifikat Program Magang - Bidang Data dan Statistik",
+          issuer: "Dinas Komunikasi dan Informatika Provinsi Jawa Timur",
+          details: "Nomor: 000.6.5.6/923.2/114.1 /2025 • Predikat: BAIK • NIM: 22082010240",
+          image: "assets/cert-magang-diskominfo.jpg"
+        }
+      ]
     },
     {
       id: "exp-infinite",
       role: "Web Development & UI/UX Design",
       company: "Infinite Learning - PT Kinema Systrans Multimedia",
-      period: "Sep 2024 - Des 2024",
-      type: "MSIB Studi Independen Bersertifikat",
+      period: "06 Sep 2024 - 31 Des 2024",
+      type: "MSIB Angkatan 7 Studi Independen Bersertifikat",
       location: "Batam / Hybrid",
       tagColor: "indigo",
       summary: "Mengembangkan produk digital berbasis Design Thinking mulai dari riset kebutuhan pengguna hingga prototipe interaktif dan frontend web.",
@@ -105,7 +114,23 @@ const portfolioData = {
         "Berkontribusi pada perancangan antarmuka dan pengembangan website Paddle Pals (sistem digital manajemen stok dan inventaris bagi komunitas nelayan).",
         "Menerapkan metodologi Design Thinking secara komprehensif: Empathize, Define problem, Ideate flowchart & wireframe, Prototype di Figma, dan Usability Testing."
       ],
-      skills: ["Figma", "Design Thinking", "User Flow", "Wireframing", "Interactive Prototyping", "UI/UX Design", "HTML/CSS"]
+      skills: ["Figma", "Design Thinking", "User Flow", "Wireframing", "Interactive Prototyping", "UI/UX Design", "HTML/CSS"],
+      certificates: [
+        {
+          label: "Lihat Sertifikat Infinite Learning",
+          title: "Certificate of Internship - Web Development Batch 7",
+          issuer: "Infinite Learning (PT Kinema Systrans Multimedia)",
+          details: "Number: 4621/IL-SIB/XII/2024 • ID: 10523839 • Batam, 31 Des 2024",
+          image: "assets/cert-msib-infinite-learning.jpg"
+        },
+        {
+          label: "Lihat Sertifikat MSIB Kemendikbud",
+          title: "Sertifikat Kepesertaan MSIB Angkatan 7",
+          issuer: "Pelaksana Pusat Kampus Merdeka (Kemendikbudristek)",
+          details: "ID Kegiatan: 10523839 • NIM: 22082010240 • PT Kinema Systrans Multimedia",
+          image: "assets/cert-msib-kemendikbud.jpg"
+        }
+      ]
     }
   ],
 
@@ -244,17 +269,6 @@ const portfolioData = {
 
   certifications: [
     {
-      id: "cert-bnsp",
-      title: "Junior Web Programmer",
-      issuer: "Badan Nasional Sertifikasi Profesi (BNSP) - LSP UPN Veteran Jawa Timur",
-      validity: "2025 - 2028",
-      type: "Sertifikasi Nasional",
-      badge: "BNSP Resmi",
-      icon: "award",
-      description: "Pengujian kompetensi nasional mencakup pemahaman arsitektur pemrograman web, logika algoritma, database relational, serta implementasi standar industri.",
-      image: null
-    },
-    {
       id: "cert-ept",
       title: "English Proficiency Test (EPT)",
       issuer: "UPA Bahasa UPN Veteran Jawa Timur",
@@ -267,6 +281,46 @@ const portfolioData = {
       icon: "globe",
       description: "Sertifikasi kemahiran berbahasa Inggris resmi (setara TOEFL Institutional) dari UPA Bahasa UPN 'Veteran' Jawa Timur dengan pencapaian skor 450.",
       image: "assets/cert-ept.jpg"
+    },
+    {
+      id: "cert-magang-diskominfo",
+      title: "Sertifikat Program Magang - Data & Statistik",
+      issuer: "Dinas Komunikasi dan Informatika Provinsi Jawa Timur",
+      validity: "18 Feb 2025 - 30 Jun 2025",
+      type: "Government Internship Certification",
+      badge: "Predikat BAIK",
+      credentialId: "No: 000.6.5.6/923.2/114.1 /2025 • NIM: 22082010240",
+      icon: "award",
+      description: "Sertifikat kelulusan Program Magang di Bidang Data dan Statistik Diskominfo Provinsi Jawa Timur dengan capaian predikat BAIK atas analisis data & visualisasi sektoral.",
+      image: "assets/cert-magang-diskominfo.jpg"
+    },
+    {
+      id: "cert-msib-infinite",
+      title: "Certificate of Internship - Web Development",
+      issuer: "Infinite Learning (PT Kinema Systrans Multimedia)",
+      validity: "06 Sep 2024 - 31 Des 2024",
+      type: "MSIB Industry Internship",
+      badge: "Batch 7 Certified",
+      credentialId: "Number: 4621/IL-SIB/XII/2024 • ID: 10523839",
+      icon: "award",
+      description: "Sertifikasi resmi magang industri MSIB Batch 7 pada program Web Development & UI/UX Design di Infinite Learning - PT Kinema Systrans Multimedia.",
+      image: "assets/cert-msib-infinite-learning.jpg",
+      secondaryImage: "assets/cert-msib-kemendikbud.jpg",
+      secondaryLabel: "Sertifikat MSIB Kemendikbud",
+      secondaryTitle: "Sertifikat Kepesertaan MSIB Angkatan 7",
+      secondaryIssuer: "Pelaksana Pusat Kampus Merdeka (Kemendikbudristek)",
+      secondaryDetails: "ID Kegiatan: 10523839 • NIM: 22082010240"
+    },
+    {
+      id: "cert-bnsp",
+      title: "Junior Web Programmer",
+      issuer: "Badan Nasional Sertifikasi Profesi (BNSP) - LSP UPN Veteran Jawa Timur",
+      validity: "2025 - 2028",
+      type: "Sertifikasi Nasional",
+      badge: "BNSP Resmi",
+      icon: "award",
+      description: "Pengujian kompetensi nasional mencakup pemahaman arsitektur pemrograman web, logika algoritma, database relational, serta implementasi standar industri.",
+      image: null
     }
   ],
 

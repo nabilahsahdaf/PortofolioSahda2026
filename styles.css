@@ -1479,6 +1479,15 @@ img {
   background: rgba(15, 23, 42, 0.04);
 }
 
+.exp-cert-actions {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-color);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .skill-tag-pill:hover {
   border-color: var(--accent-primary);
   color: var(--text-primary);

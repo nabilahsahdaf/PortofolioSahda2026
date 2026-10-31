@@ -270,6 +270,17 @@ function renderExperiences(experiences) {
         <div class="exp-skills-tags">
           ${exp.skills.map(s => `<span class="skill-tag-pill">${s}</span>`).join("")}
         </div>
+
+        ${exp.certificates && exp.certificates.length ? `
+          <div class="exp-cert-actions">
+            ${exp.certificates.map(c => `
+              <button type="button" class="btn-cert-preview" data-cert-img="${c.image}" data-cert-title="${c.title}" data-cert-issuer="${c.issuer}" data-cert-details="${c.details || ''}">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>${c.label}</span>
+              </button>
+            `).join("")}
+          </div>
+        ` : ''}
       </div>
     </div>
   `).join("");
@@ -580,11 +591,17 @@ function renderEducationAndCertifications(education, certifications, trainings) 
             </div>
           ` : ''}
           ${cert.image ? `
-            <div class="cert-action-row">
-              <button type="button" class="btn-cert-preview" data-cert-img="${cert.image}" data-cert-title="${cert.title}" data-cert-issuer="${cert.issuer}" data-cert-details="${cert.credentialId || ''} • ${cert.scoreDetail || ''}">
+            <div class="cert-action-row" style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button type="button" class="btn-cert-preview" data-cert-img="${cert.image}" data-cert-title="${cert.title}" data-cert-issuer="${cert.issuer}" data-cert-details="${cert.credentialId || ''} • ${cert.scoreDetail || cert.validity || ''}">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                <span>Lihat Sertifikat EPT</span>
+                <span>Lihat Sertifikat</span>
               </button>
+              ${cert.secondaryImage ? `
+                <button type="button" class="btn-cert-preview" data-cert-img="${cert.secondaryImage}" data-cert-title="${cert.secondaryTitle || cert.title}" data-cert-issuer="${cert.secondaryIssuer || cert.issuer}" data-cert-details="${cert.secondaryDetails || ''}">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>${cert.secondaryLabel || 'Lihat Sertifikat MSIB'}</span>
+                </button>
+              ` : ''}
             </div>
           ` : ''}
         </div>
