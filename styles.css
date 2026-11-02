@@ -1790,19 +1790,40 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   11. EDUCATION, CERTIFICATIONS & TRAININGS (2 COLUMNS LAYOUT)
+   11. EDUCATION, CERTIFICATIONS & TRAININGS (1 SECTION, 2 BARIS KANAN KIRI)
    -------------------------------------------------------------------------- */
 .credentials-layout {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
-.credentials-col {
+.credentials-row {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+/* Baris 1: Kiri (Pendidikan Formal) & Kanan (Sertifikasi Resmi) */
+.row-split-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.education-cards .edu-card {
+  height: 100%;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .subheading-wrapper {
@@ -2040,11 +2061,11 @@ img {
   font-size: 0.735rem;
 }
 
-/* Trainings (Column 2) */
+/* Baris 2: Pelatihan & Short Classes Profesional (Kanan Kiri 2 Kolom) */
 .trainings-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
 .training-card {
@@ -2053,6 +2074,9 @@ img {
   border-radius: var(--radius-md);
   padding: 18px 20px;
   transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .training-card:hover {
@@ -2819,10 +2843,19 @@ img {
     font-size: 0.8rem;
   }
 
-  /* Credentials Section (1 col only on mobile) */
+  /* Credentials Section (Stack to 1 col on Mobile) */
   .credentials-layout {
+    gap: 36px;
+  }
+
+  .row-split-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 20px;
+  }
+
+  .trainings-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   /* Achievements Section */

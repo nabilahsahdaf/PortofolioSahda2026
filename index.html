@@ -390,8 +390,8 @@
         </div>
 
         <div class="credentials-layout">
-          <!-- Left: Education & Certifications -->
-          <div class="credentials-col">
+          <!-- Baris 1: Pendidikan Formal (Kiri) & Sertifikasi Resmi (Kanan) -->
+          <div class="credentials-row">
             <div class="subheading-wrapper">
               <span class="subheading-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -402,19 +402,21 @@
               <h3>Pendidikan Formal & Sertifikasi Resmi</h3>
             </div>
 
-            <!-- Education Card -->
-            <div class="education-cards" id="education-container">
-              <!-- Injected via JS -->
-            </div>
+            <div class="row-split-grid">
+              <!-- Kiri: Education Card -->
+              <div class="education-cards" id="education-container">
+                <!-- Injected via JS -->
+              </div>
 
-            <!-- Certifications List -->
-            <div class="certifications-list" id="certifications-container">
-              <!-- Injected via JS -->
+              <!-- Kanan: Certifications List -->
+              <div class="certifications-list" id="certifications-container">
+                <!-- Injected via JS -->
+              </div>
             </div>
           </div>
 
-          <!-- Right: Professional Trainings (MySkill) -->
-          <div class="credentials-col">
+          <!-- Baris 2: Pelatihan & Short Classes Profesional (Kanan Kiri 2 Kolom) -->
+          <div class="credentials-row">
             <div class="subheading-wrapper">
               <span class="subheading-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -425,6 +427,7 @@
               <h3>Pelatihan & Short Classes Profesional</h3>
             </div>
 
+            <!-- Kanan Kiri: Trainings List -->
             <div class="trainings-list" id="trainings-container">
               <!-- Injected via JS -->
             </div>
