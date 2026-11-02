@@ -142,7 +142,7 @@ const portfolioData = {
       categoryLabel: "UI/UX Mobile App",
       badge: "Infinite Learning MSIB",
       year: "2024",
-      thumbnail: "assets/Desktop - 1.png",
+      thumbnail: "assets/project-agrofriend.jpg",
       summary: "Platform aplikasi mobile inovatif yang dirancang untuk membantu para petani memantau kesehatan tanaman, prakiraan cuaca pertanian, serta manajemen panen yang terukur.",
       role: "Hipster & Lead UI/UX Designer",
       tags: ["Figma", "Design Thinking", "User Flow", "Prototyping", "Mobile UI"],
