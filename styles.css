@@ -1804,26 +1804,22 @@ img {
   width: 100%;
 }
 
-/* Baris 1: Kiri (Pendidikan Formal) & Kanan (Sertifikasi Resmi) */
+/* Pendidikan Formal & Sertifikasi Resmi (Tampilan 3 Baris) */
 .row-split-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .education-cards {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .education-cards .edu-card {
-  height: 100%;
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .subheading-wrapper {
@@ -2849,8 +2845,7 @@ img {
   }
 
   .row-split-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
 
   .trainings-list {
