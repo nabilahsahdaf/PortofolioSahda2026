@@ -32,7 +32,7 @@ const portfolioData = {
     stats: [
       { label: "IPK Kumulatif", value: "3.74", suffix: "/4.00", icon: "academic-cap" },
       { label: "Proyek Unggulan", value: "4+", suffix: "Karya", icon: "sparkles" },
-      { label: "Sertifikasi Resmi", value: "5+", suffix: "Kredensial", icon: "badge-check" },
+      { label: "Sertifikasi Resmi", value: "2", suffix: "Lisensi", icon: "badge-check" },
       { label: "Pelatihan Profesional", value: "4+", suffix: "MySkill", icon: "certificate" }
     ]
   },
@@ -273,18 +273,6 @@ const portfolioData = {
 
   certifications: [
     {
-      id: "cert-lomba-uiux",
-      title: "Semi Finalis UI/UX Design Competition",
-      issuer: "Institut Teknologi Telkom Purwokerto (ITASE 5.0)",
-      validity: "November 2023",
-      type: "National Competition Certification",
-      badge: "Semi Finalis Nasional",
-      credentialId: "No: 50/HMSI/XI/2023 • HMSI IT Telkom Purwokerto",
-      icon: "award",
-      description: "Sertifikat penghargaan atas keberhasilan dan partisipasi sebagai Semi Finalis dalam ajang UI/UX Design Competition Dies Natalis Sistem Informasi 2023 (ITASE 5.0) dengan karya rancangan aplikasi mobile 'Peduli Gula'.",
-      image: "assets/cert-lomba-uiux-itase.jpg"
-    },
-    {
       id: "cert-ept",
       title: "English Proficiency Test (EPT)",
       issuer: "UPA Bahasa UPN Veteran Jawa Timur",
@@ -297,35 +285,6 @@ const portfolioData = {
       icon: "globe",
       description: "Sertifikasi kemahiran berbahasa Inggris resmi (setara TOEFL Institutional) dari UPA Bahasa UPN 'Veteran' Jawa Timur dengan pencapaian skor 450.",
       image: "assets/cert-ept.jpg"
-    },
-    {
-      id: "cert-magang-diskominfo",
-      title: "Sertifikat Program Magang - Data & Statistik",
-      issuer: "Dinas Komunikasi dan Informatika Provinsi Jawa Timur",
-      validity: "18 Feb 2025 - 30 Jun 2025",
-      type: "Government Internship Certification",
-      badge: "Predikat BAIK",
-      credentialId: "No: 000.6.5.6/923.2/114.1 /2025 • NIM: 22082010240",
-      icon: "award",
-      description: "Sertifikat kelulusan Program Magang di Bidang Data dan Statistik Diskominfo Provinsi Jawa Timur dengan capaian predikat BAIK atas analisis data & visualisasi sektoral.",
-      image: "assets/cert-magang-diskominfo.jpg"
-    },
-    {
-      id: "cert-msib-infinite",
-      title: "Certificate of Internship - Web Development",
-      issuer: "Infinite Learning (PT Kinema Systrans Multimedia)",
-      validity: "06 Sep 2024 - 31 Des 2024",
-      type: "MSIB Industry Internship",
-      badge: "Batch 7 Certified",
-      credentialId: "Number: 4621/IL-SIB/XII/2024 • ID: 10523839",
-      icon: "award",
-      description: "Sertifikasi resmi magang industri MSIB Batch 7 pada program Web Development & UI/UX Design di Infinite Learning - PT Kinema Systrans Multimedia.",
-      image: "assets/cert-msib-infinite-learning.jpg",
-      secondaryImage: "assets/cert-msib-kemendikbud.jpg",
-      secondaryLabel: "Sertifikat MSIB Kemendikbud",
-      secondaryTitle: "Sertifikat Kepesertaan MSIB Angkatan 7",
-      secondaryIssuer: "Pelaksana Pusat Kampus Merdeka (Kemendikbudristek)",
-      secondaryDetails: "ID Kegiatan: 10523839 • NIM: 22082010240"
     },
     {
       id: "cert-bnsp",
@@ -400,7 +359,10 @@ const portfolioData = {
   ]
 };
 
-// Export to window
+// Export to window or CommonJS
 if (typeof window !== "undefined") {
   window.portfolioData = portfolioData;
+}
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = portfolioData;
 }
