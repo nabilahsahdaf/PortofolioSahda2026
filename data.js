@@ -10,13 +10,13 @@ const portfolioData = {
     initials: "NSF",
     taglineEyebrow: "nabilah@portfolio:~$ whoami",
     avatar: "assets/avatar-nabilah.jpg",
-    badgeStatus: "Tersedia untuk Magang & Proyek UI/UX & Data",
+    badgeStatus: "Tersedia untuk Full-Time & Proyek UI/UX & Data",
     roles: [
       "UI/UX Design",
       "System Analyst"
     ],
     headline: "Transforming complex data into intuitive, human-centered digital experiences.",
-    bio: "Mahasiswa Sistem Informasi UPN 'Veteran' Jawa Timur (IPK 3.74) dengan passion kuat pada UI/UX Design dan Data Analysis. Berpengalaman di Infinite Learning (MSIB) dalam Design Thinking & Figma, serta Dinas Komunikasi dan Informatika Provinsi Jawa Timur dalam pengolahan data & statistik.",
+    bio: "Lulusan S1 Sistem Informasi UPN 'Veteran' Jawa Timur (IPK 3.74) dengan passion kuat pada UI/UX Design dan Data Analysis. Berpengalaman di Infinite Learning (MSIB) dalam Design Thinking & Figma, serta Dinas Komunikasi dan Informatika Provinsi Jawa Timur dalam pengolahan data & statistik.",
     location: "Kab. Bekasi, Jawa Barat, Indonesia",
     email: "nabilahsahdaf@gmail.com",
     phone: "081288473857",
@@ -38,11 +38,11 @@ const portfolioData = {
   },
 
   about: {
-    story: `**Information Systems** student at Universitas Pembangunan Nasional "Veteran" Jawa Timur with a strong focus on **UI/UX Design, User Flow, and Prototyping**. Gained hands-on experience through the MSIB Independent Study program as a **Web Development & UI/UX Design intern at Infinite Learning - PT Kinema Systrans Multimedia**, covering the application of Design Thinking, user needs identification, flowchart and wireframe creation, and prototyping using Figma. Also experienced as a **Data Analyst Intern at Dinas Komunikasi dan Informatika Provinsi Jawa Timur (Bidang Data dan Statistik)**, processing, cleaning, and visualizing sector data using Python, SQL, and Looker Studio. Skilled in cross-team collaboration, creative thinking, detail-oriented, and committed to delivering projects on time.`,
+    story: `**Information Systems** graduate from Universitas Pembangunan Nasional "Veteran" Jawa Timur with a strong focus on **UI/UX Design, User Flow, and Prototyping**. Gained hands-on experience through the MSIB Independent Study program as a **Web Development & UI/UX Design intern at Infinite Learning - PT Kinema Systrans Multimedia**, covering the application of Design Thinking, user needs identification, flowchart and wireframe creation, and prototyping using Figma. Also experienced as a **Data Analyst Intern at Dinas Komunikasi dan Informatika Provinsi Jawa Timur (Bidang Data dan Statistik)**, processing, cleaning, and visualizing sector data using Python, SQL, and Looker Studio. Skilled in cross-team collaboration, creative thinking, detail-oriented, and committed to delivering projects on time.`,
 
     quickInfo: [
       { label: "Domisili", value: "Kab. Bekasi, Jawa Barat, Indonesia" },
-      { label: "Pendidikan", value: "S1 Sistem Informasi - UPN 'Veteran' Jatim (2022 - 2026)" },
+      { label: "Pendidikan", value: "S1 Sistem Informasi - UPN 'Veteran' Jatim (2022 - 2026 • Lulus)" },
       { label: "IPK", value: "3.74 / 4.00" },
       { label: "Fokus Bidang", value: "UI/UX Design, System Analyst" },
       { label: "Bahasa", value: "Indonesia (Native), English (Certified EPT)" },
@@ -265,9 +265,9 @@ const portfolioData = {
     {
       degree: "S1 Sistem Informasi",
       institution: "Universitas Pembangunan Nasional 'Veteran' Jawa Timur",
-      period: "2022 - 2026 (Sedang Menempuh)",
+      period: "2022 - 2026 (Lulus)",
       gpa: "IPK 3.74 / 4.00",
-      description: "Mempelajari integrasi rekayasa perangkat lunak, analisis sistem informasi bisnis, tata kelola data, dan rekayasa interaksi manusia-komputer. Aktif dalam kompetisi desain produk dan program MSIB nasional."
+      description: "Menyelesaikan studi sarjana dengan pemahaman mendalam pada integrasi rekayasa perangkat lunak, analisis sistem informasi bisnis, tata kelola data, dan rekayasa interaksi manusia-komputer. Aktif dalam kompetisi desain produk dan program MSIB nasional."
     }
   ],
 
