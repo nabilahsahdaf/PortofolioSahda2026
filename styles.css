@@ -1795,8 +1795,14 @@ img {
 .credentials-layout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 36px;
+  gap: 32px;
   align-items: start;
+}
+
+.credentials-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .subheading-wrapper {
@@ -2647,8 +2653,7 @@ img {
   }
 
   .credentials-layout {
-    grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 24px;
   }
 
   .contact-grid {
@@ -2812,6 +2817,12 @@ img {
   .filter-tab {
     padding: 7px 14px;
     font-size: 0.8rem;
+  }
+
+  /* Credentials Section (1 col only on mobile) */
+  .credentials-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   /* Achievements Section */
