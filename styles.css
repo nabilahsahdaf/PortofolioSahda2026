@@ -1790,12 +1790,13 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   11. EDUCATION, CERTIFICATIONS & TRAININGS
+   11. EDUCATION, CERTIFICATIONS & TRAININGS (2 COLUMNS LAYOUT)
    -------------------------------------------------------------------------- */
 .credentials-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  align-items: start;
 }
 
 .subheading-wrapper {
@@ -1881,11 +1882,11 @@ img {
   line-height: 1.6;
 }
 
-/* Certifications List (Grid in Row 1) */
+/* Certifications List (Column 1) */
 .certifications-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .cert-card {
@@ -2033,11 +2034,11 @@ img {
   font-size: 0.735rem;
 }
 
-/* Trainings (Grid in Row 2) */
+/* Trainings (Column 2) */
 .trainings-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .training-card {
@@ -2046,9 +2047,6 @@ img {
   border-radius: var(--radius-md);
   padding: 18px 20px;
   transition: all var(--transition-fast);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .training-card:hover {
@@ -2649,6 +2647,7 @@ img {
   }
 
   .credentials-layout {
+    grid-template-columns: 1fr;
     gap: 36px;
   }
 
@@ -2982,11 +2981,6 @@ img {
   }
 
   /* Credentials */
-  .certifications-list,
-  .trainings-list {
-    grid-template-columns: 1fr;
-  }
-
   .cert-card,
   .edu-card,
   .training-card {
