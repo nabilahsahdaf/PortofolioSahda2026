@@ -1804,22 +1804,17 @@ img {
   width: 100%;
 }
 
-/* Pendidikan Formal & Sertifikasi Resmi (Tampilan 3 Baris) */
+/* Baris 1: Pendidikan Formal & Sertifikasi Resmi (Tampilan 3 Kolom) */
 .row-split-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
 }
 
-.education-cards {
-  display: flex;
-  flex-direction: column;
-}
-
-.education-cards .edu-card {
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
+.education-cards,
+.certifications-list {
+  display: contents;
 }
 
 .subheading-wrapper {
@@ -1851,12 +1846,16 @@ img {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 24px;
-  margin-bottom: 20px;
+  padding: 22px;
+  margin-bottom: 0;
   transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .edu-card:hover {
+  transform: translateY(-2px);
   border-color: var(--accent-teal);
   box-shadow: var(--shadow-sm);
 }
@@ -1916,17 +1915,20 @@ img {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 22px 20px;
   margin-bottom: 0;
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  gap: 14px;
   align-items: flex-start;
   transition: all var(--transition-fast);
+  height: 100%;
 }
 
 .cert-card:hover {
-  transform: translateX(4px);
+  transform: translateY(-2px);
   border-color: var(--accent-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .cert-icon {
@@ -1970,7 +1972,9 @@ img {
 
 .cert-body {
   flex: 1;
-  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .cert-header-row {
@@ -2025,7 +2029,8 @@ img {
 }
 
 .cert-action-row {
-  margin-top: 10px;
+  margin-top: auto;
+  padding-top: 12px;
 }
 
 .btn-cert-preview {
@@ -2845,6 +2850,7 @@ img {
   }
 
   .row-split-grid {
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
