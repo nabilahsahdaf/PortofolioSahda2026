@@ -55,29 +55,12 @@ function initThemeToggle() {
 }
 
 /* ==========================================================================
-   3. AMBIENT BACKGROUND STARS PARTICLES
+   3. AMBIENT BACKGROUND STARS PARTICLES (CLEAN / NO STARS)
    ========================================================================== */
 function initAmbientStars() {
   const container = document.getElementById("stars-container");
   if (!container) return;
-
-  const starCount = 45;
-  const fragment = document.createDocumentFragment();
-
-  for (let i = 0; i < starCount; i++) {
-    const star = document.createElement("div");
-    star.className = "star-dot";
-    const size = Math.random() * 3 + 1;
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-    star.style.top = `${Math.random() * 100}%`;
-    star.style.left = `${Math.random() * 100}%`;
-    star.style.animationDelay = `${Math.random() * 5}s`;
-    star.style.animationDuration = `${Math.random() * 3 + 2}s`;
-    fragment.appendChild(star);
-  }
-
-  container.appendChild(fragment);
+  container.innerHTML = "";
 }
 
 /* ==========================================================================
