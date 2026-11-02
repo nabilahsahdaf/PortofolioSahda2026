@@ -98,7 +98,8 @@ async function runTests() {
       '/assets/cert-myskill-ux-writing.jpg',
       '/assets/cert-myskill-figma.jpg',
       '/assets/cert-myskill-data-visualization.jpg',
-      '/assets/cert-myskill-frontend.jpg'
+      '/assets/cert-myskill-frontend.jpg',
+      '/assets/cert-lomba-uiux-itase.jpg'
     ];
 
     for (const assetPath of assetsToTest) {
@@ -130,6 +131,8 @@ async function runTests() {
       assert(browserOutput.includes('Peduli Gula - Diabetes Monitoring App'), 'Browser berhasil me-render project Peduli Gula dari data.js');
       assert(browserOutput.includes('assets/Thumbnail.jpg'), 'Browser berhasil memuat thumbnail Peduli Gula');
       assert(browserOutput.includes('Infinite Learning'), 'Browser berhasil me-render timeline pengalaman kerja');
+      assert(browserOutput.includes('assets/cert-lomba-uiux-itase.jpg'), 'Browser berhasil me-render sertifikat lomba UI/UX ITASE 5.0');
+      assert(browserOutput.includes('Semi Finalis UI/UX Design Competition'), 'Browser berhasil me-render prestasi Semi Finalis UI/UX');
     } else {
       console.log('  ⚠️ Edge path tidak ditemukan, melewatkan uji headless Edge.');
     }

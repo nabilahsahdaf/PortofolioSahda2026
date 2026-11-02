@@ -486,6 +486,12 @@ function openProjectModal(projectId) {
           </svg>
           <span>Lihat Tampilan Desain</span>
         </a>
+        ${project.certificateImage ? `
+          <button type="button" class="btn btn-secondary btn-cert-preview" data-cert-img="${project.certificateImage}" data-cert-title="${project.certificateTitle || project.title}" data-cert-issuer="${project.certificateIssuer || 'ITASE 5.0'}" data-cert-details="${project.certificateDetails || ''}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            <span>Lihat Sertifikat Lomba</span>
+          </button>
+        ` : ''}
         ${(project.github || (project.id === 'paddlepals' && project.link)) ? `
           <a href="${project.github || project.link}" 
             target="_blank" 
@@ -671,6 +677,14 @@ function renderAchievements(achievements) {
         <p class="achievement-desc">
           <strong>Karya: ${ach.projectTitle}</strong> — ${ach.description}
         </p>
+        ${ach.image ? `
+          <div style="margin-top: 14px;">
+            <button type="button" class="btn-cert-preview" data-cert-img="${ach.image}" data-cert-title="${ach.title}" data-cert-issuer="${ach.organizer} (${ach.event})" data-cert-details="${ach.certificateNumber ? ach.certificateNumber + ' • ' : ''}Karya: ${ach.projectTitle}">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              <span>Lihat Sertifikat Lomba UI/UX</span>
+            </button>
+          </div>
+        ` : ''}
       </div>
     </div>
   `).join("");

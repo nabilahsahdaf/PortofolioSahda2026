@@ -32,7 +32,7 @@ const portfolioData = {
     stats: [
       { label: "IPK Kumulatif", value: "3.74", suffix: "/4.00", icon: "academic-cap" },
       { label: "Proyek Unggulan", value: "4+", suffix: "Karya", icon: "sparkles" },
-      { label: "Sertifikasi Resmi", value: "5", suffix: "Kredensial", icon: "badge-check" },
+      { label: "Sertifikasi Resmi", value: "5+", suffix: "Kredensial", icon: "badge-check" },
       { label: "Pelatihan Profesional", value: "4+", suffix: "MySkill", icon: "certificate" }
     ]
   },
@@ -191,13 +191,17 @@ const portfolioData = {
       role: "Co-Designer (Team of 3) - Research & UI Prototyping",
       tags: ["Award Winning", "Figma", "Healthcare UX", "Accessibility", "Prototyping"],
       highlights: [
-        "Meraih predikat Semi Finalis pada UI/UX Design Competition at 7th Anniversary Information Systems, Telkom Institute of Technology Purwokerto.",
+        "Meraih predikat Semi Finalis pada ajang UI/UX Design Competition Dies Natalis Sistem Informasi 2023 (ITASE 5.0), Institut Teknologi Telkom Purwokerto.",
         "Merancang antarmuka dengan standar aksesibilitas tinggi (tipografi jelas, kontras warna ramah lansia, dan grafik tren visual yang intuitif).",
         "Riset empati bersama penderita diabetes untuk mereduksi beban mental pencatatan medis harian.",
         "Pengembangan prototipe interaktif Figma yang diuji langsung kepada pengguna sasaran."
       ],
       tools: ["Figma", "UX Research", "Usability Testing", "Prototyping"],
       figma: "https://www.figma.com/design/bRWTzsADrlXXqyDdrOwATa/IMK-LOMBA?node-id=1-17&t=mizM6mVw1SCi74XT-1",
+      certificateImage: "assets/cert-lomba-uiux-itase.jpg",
+      certificateTitle: "Sertifikat Semi Finalis UI/UX Design Competition ITASE 5.0",
+      certificateIssuer: "Institut Teknologi Telkom Purwokerto (ITASE 5.0)",
+      certificateDetails: "No. 50/HMSI/XI/2023 • Lomba UI/UX Design Competition",
       caseStudyUrl: "#modal-peduligula"
     },
     {
@@ -268,6 +272,18 @@ const portfolioData = {
   ],
 
   certifications: [
+    {
+      id: "cert-lomba-uiux",
+      title: "Semi Finalis UI/UX Design Competition",
+      issuer: "Institut Teknologi Telkom Purwokerto (ITASE 5.0)",
+      validity: "November 2023",
+      type: "National Competition Certification",
+      badge: "Semi Finalis Nasional",
+      credentialId: "No: 50/HMSI/XI/2023 • HMSI IT Telkom Purwokerto",
+      icon: "award",
+      description: "Sertifikat penghargaan atas keberhasilan dan partisipasi sebagai Semi Finalis dalam ajang UI/UX Design Competition Dies Natalis Sistem Informasi 2023 (ITASE 5.0) dengan karya rancangan aplikasi mobile 'Peduli Gula'.",
+      image: "assets/cert-lomba-uiux-itase.jpg"
+    },
     {
       id: "cert-ept",
       title: "English Proficiency Test (EPT)",
@@ -371,11 +387,13 @@ const portfolioData = {
     {
       id: "achieve-telkom",
       title: "Semi Finalis UI/UX Design Competition",
-      event: "7th Anniversary Information Systems",
-      organizer: "Telkom Institute of Technology Purwokerto",
+      event: "Dies Natalis Sistem Informasi 2023 (ITASE 5.0)",
+      organizer: "Institut Teknologi Telkom Purwokerto",
       year: "2023",
       badge: "Tingkat Nasional",
       icon: "trophy",
+      certificateNumber: "No. 50/HMSI/XI/2023",
+      image: "assets/cert-lomba-uiux-itase.jpg",
       projectTitle: "Aplikasi Mobile 'Peduli Gula'",
       description: "Merancang inovasi aplikasi mobile kesehatan 'Peduli Gula' bersama 2 anggota tim. Bertanggung jawab penuh mulai dari riset kebutuhan penderita diabetes, arsitektur informasi, perancangan UI/UX, hingga pengujian prototipe interaktif di hadapan dewan juri."
     }
