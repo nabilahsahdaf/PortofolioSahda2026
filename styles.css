@@ -1784,10 +1784,6 @@ img {
   padding-top: 20px;
   border-top: 1px solid var(--border-color);
 }
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
-}
 
 /* --------------------------------------------------------------------------
    11. EDUCATION, CERTIFICATIONS & TRAININGS (1 SECTION, 2 BARIS KANAN KIRI)
@@ -1814,7 +1810,7 @@ img {
 
 .education-cards,
 .certifications-list {
-  display: contents;
+  display: contents !important;
 }
 
 .subheading-wrapper {
@@ -1904,13 +1900,7 @@ img {
   line-height: 1.6;
 }
 
-/* Certifications List (Column 1) */
-.certifications-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
+/* Certifications Cards */
 .cert-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -2693,6 +2683,7 @@ img {
 
 /* Tablet Portrait & Switch to Mobile Nav (<= 920px) */
 @media (max-width: 920px) {
+
   .nav-links,
   .nav-cta-btn {
     display: none;
